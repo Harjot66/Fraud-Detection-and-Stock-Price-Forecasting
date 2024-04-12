@@ -67,7 +67,7 @@ In our project, we've leveraged various machine learning models alongside a deep
 
 Our final recommendation is that for fraud detection, the best models to use are ANN and Random Forest. In cases where we have extensive data available, we recommend using ANN, as deep learning models tend to yield better results than machine learning models in these scenarios. However, in cases where data availability is limited, we recommend utilizing machine learning models, particularly Random Forest or KNN, as they have shown to deliver superior results. Additionally, Random Forest, being a tree-based ensemble method, it might provide better interpretability while explaining what features are important which the ANN wouldn't be able to explain.
 
-# General Methodology (NASDAQ Index Price Dataset)
+## General Methodology (NASDAQ Index Price Dataset)
 
 In this analysis, we embark on constructing a robust predictive tool for the NASDAQ, utilizing historical data from the past five years. Our objective is to not only capture the intricacies of NASDAQ trends but also to project them into the future, specifically targeting price trends for March 2024.
 
