@@ -21,7 +21,7 @@ This anonymized and PCA-transformed dataset is widely used by researchers and pr
 ### NASDAQ Index Price Dataset
 For the second part of our project, focusing on Recurrent Neural Networks (RNN), we will utilize the Yahoo Finance API to extract five years of closing price data for the NASDAQ index. This comprehensive dataset will enable us to develop and refine our predictive model using LSTM networks, aiming to accurately forecast future price movements based on historical trends.
 
-## General Methodology
+## General Methodology (Fraud Detection Dataset)
 
 For each classification algorithm that we have tested, we have used a similar approach. Some of the parameters of the algorithm are fixed to ensure no overfitting or quicker convergence while the other parameters are tuned for improved accuracy using GridSearch. Scikit Learn provides the GridSearch functionality that sets each possible combination of hyperparameters provided for the classifier, fits the model, tests it using the scoring metric specified after cross-validation, and helps us identify the best set of hyperparameters.
 
@@ -36,8 +36,6 @@ As we have a typical binary classification problem at our hand, the various algo
 4. K-Nearest Neighbours.
 
 We compared the best estimator from the GridSearch from each of these four algorithms to identify the best one of them all using the F1 Metric and a confusion matrix that provides us with the true positives and negatives as well as the false positives and negatives.
-
-## ANN
 
 Next we will use Artificial Neural Networks (ANN) to enhance our credit card fraud detection capabilities. ANNs are inspired by the biological neural networks that constitute animal brains, and they are particularly effective for pattern recognition tasks due to their ability to learn and model non-linear and complex relationships between inputs and outputs. By using a multi-layered structure of neurons, ANNs can discern subtle patterns in data that might indicate fraudulent activities. We will design and train an ANN model, optimizing its architecture—number of layers, neurons per layer, activation functions, and more—to effectively identify fraudulent transactions amidst our highly unbalanced dataset. This approach aims to leverage the deep learning strengths of ANNs to improve the accuracy and reliability of our fraud detection system.
 
@@ -63,13 +61,13 @@ Challenges: Require large amounts of data to train correctly. Additionally, they
 
 Activation functions in artificial neural networks (ANNs) serve a crucial role in determining the output of each neuron. They introduce non-linearities to the model, enabling it to learn complex patterns in the data. ReLU (Rectified Linear Unit) is commonly used in hidden layers because it is computationally efficient and helps mitigate the vanishing gradient problem during training. ReLU simply outputs the input if it's positive, otherwise, it outputs zero. On the other hand, the sigmoid function is often employed in the output layer, especially for binary classification tasks like fraud detection, because it squashes the output between 0 and 1, effectively representing probabilities. This makes it suitable for predicting binary outcomes, where values closer to 1 indicate a higher probability of fraud, while values closer to 0 indicate the opposite.
 
-## Conclusion
+## Conclusion (Fraud Detection Dataset)
 
 In our project, we've leveraged various machine learning models alongside a deep learning architecture (Artificial Neural Network, ANN). Upon analyzing the results, we found that the most effective machine learning model was Random Forest, boasting an impressive F1 score of 85.02%. Comparatively, the ANN achieved an F1 score of 85.51%, positioning at the same level of Random Forest. As we can see, deep learning models tend to perform better than machine learning models if they are fed with the correct amount of data, but Random Forest still achieved almost the same performance.
 
 Our final recommendation is that for fraud detection, the best models to use are ANN and Random Forest. In cases where we have extensive data available, we recommend using ANN, as deep learning models tend to yield better results than machine learning models in these scenarios. However, in cases where data availability is limited, we recommend utilizing machine learning models, particularly Random Forest or KNN, as they have shown to deliver superior results. Additionally, Random Forest, being a tree-based ensemble method, it might provide better interpretability while explaining what features are important which the ANN wouldn't be able to explain.
 
-# RNN
+# General Methodology (NASDAQ Index Price Dataset)
 
 In this analysis, we embark on constructing a robust predictive tool for the NASDAQ, utilizing historical data from the past five years. Our objective is to not only capture the intricacies of NASDAQ trends but also to project them into the future, specifically targeting price trends for March 2024.
 
@@ -81,7 +79,7 @@ Throughout the training phase, the RNN adjusts its internal parameters to minimi
 
 Our approach aims not only to forecast the overall direction of the NASDAQ for the upcoming month but also to enhance our understanding of how neural networks can be effectively applied to financial time series forecasting. This deep analysis of NASDAQ trends allows us to grasp the complex underlying interactions and subtle changes that might be easily overlooked by simpler analytical methods, thereby providing a more comprehensive prediction of future market behavior.
 
-## Conclusion
+## Conclusion (NASDAQ Index Price Dataset)
 
 In conclusion, it is important to emphasize that this type of model serves to predict the trend of future prices rather than the price itself. Based on the results, we believe the model performed well when compared to real data, especially considering that we only used a single input variable. Therefore, we recommend incorporating more input variables in the future to potentially achieve even better results.
 
