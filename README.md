@@ -12,13 +12,11 @@ The results of this project are expected to contribute valuable insights into th
 ## Dataset
 
 ### Fraud Detection Dataset
- The dataset available on Kaggle, titled "Fraud Detection in Credit Card Transactions," is an essential resource for developing and testing credit card fraud detection systems (Yashpal, 2022). This dataset is comprised of transactions made by credit cards in September 2013 by European cardholders. It presents transactions that occurred in two days, where 492 frauds are out of 284,807 transactions. The dataset is highly unbalanced, representing a typical scenario for real-world financial datasets, where fraudulent transactions are much rarer than legitimate ones.
+The dataset available on Kaggle, titled "Fraud Detection in Credit Card Transactions," is an essential resource for developing and testing credit card fraud detection systems (Yashpal, 2022). This dataset is comprised of transactions made by credit cards in September 2013 by European cardholders. It presents transactions that occurred in two days, where 492 frauds are out of 284,807 transactions. The dataset is highly unbalanced, representing a typical scenario for real-world financial datasets, where fraudulent transactions are much rarer than legitimate ones.
 
 Each transaction in the dataset is described by 31 features, most of which are numerical input variables resulting from a PCA transformation. This was done to protect sensitive information. The features are labeled V1, V2, ..., V28, with 'Time' and 'Amount' being the only features not transformed. 'Time' contains the seconds elapsed between each transaction and the first transaction in the dataset, while 'Amount' is the transaction amount. The response variable, 'Class', is binary, where 1 indicates a fraudulent transaction and 0 indicates a non-fraudulent one.
 
 This anonymized and PCA-transformed dataset is widely used by researchers and practitioners to apply machine learning techniques, especially for training models to identify patterns that signify fraudulent activities effectively.
-<br>
-<br>
 
 ### NASDAQ Index Price Dataset
 For the second part of our project, focusing on Recurrent Neural Networks (RNN), we will utilize the Yahoo Finance API to extract five years of closing price data for the NASDAQ index. This comprehensive dataset will enable us to develop and refine our predictive model using LSTM networks, aiming to accurately forecast future price movements based on historical trends.
@@ -38,6 +36,8 @@ As we have a typical binary classification problem at our hand, the various algo
 4. K-Nearest Neighbours.
 
 We compared the best estimator from the GridSearch from each of these four algorithms to identify the best one of them all using the F1 Metric and a confusion matrix that provides us with the true positives and negatives as well as the false positives and negatives.
+
+## ANN
 
 Next we will use Artificial Neural Networks (ANN) to enhance our credit card fraud detection capabilities. ANNs are inspired by the biological neural networks that constitute animal brains, and they are particularly effective for pattern recognition tasks due to their ability to learn and model non-linear and complex relationships between inputs and outputs. By using a multi-layered structure of neurons, ANNs can discern subtle patterns in data that might indicate fraudulent activities. We will design and train an ANN model, optimizing its architecture—number of layers, neurons per layer, activation functions, and more—to effectively identify fraudulent transactions amidst our highly unbalanced dataset. This approach aims to leverage the deep learning strengths of ANNs to improve the accuracy and reliability of our fraud detection system.
 
@@ -62,12 +62,6 @@ Advantages: ANNs can learn complex patterns and adapt to new data. They can dete
 Challenges: Require large amounts of data to train correctly. Additionally, they can be difficult to interpret, which can be a problem in regulatory environments. Deep learning tends to work better with large amounts of data than machine learning models.
 
 Activation functions in artificial neural networks (ANNs) serve a crucial role in determining the output of each neuron. They introduce non-linearities to the model, enabling it to learn complex patterns in the data. ReLU (Rectified Linear Unit) is commonly used in hidden layers because it is computationally efficient and helps mitigate the vanishing gradient problem during training. ReLU simply outputs the input if it's positive, otherwise, it outputs zero. On the other hand, the sigmoid function is often employed in the output layer, especially for binary classification tasks like fraud detection, because it squashes the output between 0 and 1, effectively representing probabilities. This makes it suitable for predicting binary outcomes, where values closer to 1 indicate a higher probability of fraud, while values closer to 0 indicate the opposite.
-
-### Oversampling & Finding the Best Model
-
-To address the problem of class imbalance in the target variable of our dataset, we have applied the Synthetic Minority Over-sampling Technique, or SMOTE. This method helps to balance the classes by generating synthetic examples of the minority class. SMOTE works by selecting examples that are close in the feature space, drawing a line between the examples in the feature space, and creating new examples along that line. This approach helps to avoid overfitting that can occur with simple over-sampling and allows the model to learn more robust patterns, improving its performance on new, unseen data. By using SMOTE, we ensure a more balanced dataset, which is crucial for building effective and unbiased machine learning models such as the K-nearest neighbors (KNN) classifier used in this case
-
-It's crucial to emphasize that we will be applying this to the original dataset with PCA applied, denoted as 'dataset', rather than to 'df' as the 'dataset' has the true ratio of normal to fraud transactions.
 
 ## Conclusion
 
