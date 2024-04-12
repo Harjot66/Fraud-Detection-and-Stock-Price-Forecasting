@@ -1,4 +1,4 @@
-# Fraud Detection and tock Price Forecasting
+# Fraud Detection and Stock Price Forecasting
 
 ## Introduction
 The primary aim of this project is to delve into two significant areas. The first area focuses on the detection of credit card fraud through the application of various machine learning models and neural networks. The objective here is to methodically compare these models to identify which one offers the most effective performance in recognizing and preventing fraudulent transactions. This comparative analysis will not only highlight the strengths and weaknesses of each model but also help in choosing the best-suited model for deployment in real-world scenarios.
